@@ -2,14 +2,20 @@ SRCS			=	checker.c			\
 					check_args.c		\
 					init_values.c		\
 					check_operations.c	\
+					exec_operations.c	\
+					swap.c				\
+					push.c				\
+					rotate.c			\
+					reverse.c			\
+					check_stacks.c		\
 					error.c
 OBJS			= $(SRCS:.c=.o)
 NAME			= checker
-FLAGS			= -Wall -Werror -Wextra
+FLAGS			= -Wall -Werror -Wextra -g3 -fsanitize=address
 RM				= rm -f
 
 .c.o:
-			@gcc -c $(FLAGS) $< -o $(<:.c=.o)
+			@gcc -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS) _libft
 			@gcc -o $(NAME) $(OBJS) $(shell find ../libft/ -name "*.a")

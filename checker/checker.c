@@ -5,6 +5,7 @@ int		main(int argc, char **argv)
 	t_data	*data;
 	int		ret;
 	char	*line;
+	int		i;
 
 	data = NULL;
 	if (!(argc - 1))
@@ -21,8 +22,20 @@ int		main(int argc, char **argv)
 			ret = 0;
 		else if (check_operations(line))
 			ft_error(data);
-		//Do the operation
+		exec_operations(data, line);
+		/*printf("STACK A\n");
+		i = 0;
+		while (i < data->num_a)
+			printf("%i\n", data->a[i++]);
+		printf("STACK B\n");
+		i = 0;
+		while (i < data->num_b)
+			printf("%i\n", data->b[i++]);*/
+		free(line);
 	}
+	check_stacks(data);
 	ft_exit(data);
 	return (0);
 }
+
+//REVISAR MEMORY-LEAKS

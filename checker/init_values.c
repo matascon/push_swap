@@ -52,12 +52,12 @@ static void	stack_a(t_data *data)
 
 t_data		*init_values(t_data *data, int argc, char **argv)
 {
-	data = (t_data *)malloc(sizeof(t_data));
-	ft_bzero(data, sizeof(t_data));
+	data = (t_data *)ft_calloc(1, sizeof(t_data));
 	data->argc = argc - 1;
 	data->argv = argv;
-	data->a = (int *)malloc(data->argc * sizeof(int));
+	data->a = (int *)ft_calloc(data->argc, sizeof(int));
 	data->b = NULL;
+	data->aux = NULL;
 	stack_a(data);
 	return (data);
 }
