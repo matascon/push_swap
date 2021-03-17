@@ -23,14 +23,15 @@ int		main(int argc, char **argv)
 		else if (check_operations(line))
 			ft_error(data);
 		exec_operations(data, line);
-		/*printf("STACK A\n");
+		printf("STACK A ---> ");
 		i = 0;
 		while (i < data->num_a)
-			printf("%i\n", data->a[i++]);
-		printf("STACK B\n");
+			printf("%i ", data->a[i++]);
+		printf("\nSTACK B ---> ");
 		i = 0;
 		while (i < data->num_b)
-			printf("%i\n", data->b[i++]);*/
+			printf("%i ", data->b[i++]);
+		printf("\n");
 		free(line);
 	}
 	check_stacks(data);
