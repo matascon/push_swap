@@ -6,7 +6,7 @@
 /*   By: tascon <tascon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 14:53:00 by tascon            #+#    #+#             */
-/*   Updated: 2021/03/17 10:20:28 by tascon           ###   ########.fr       */
+/*   Updated: 2021/03/23 10:22:36 by tascon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	ft_exit(t_data *data)
 			free(data->a);
 		if (data->b != NULL)
 			free(data->b);
+		if (data->copy)
+			free(data->copy);
 		free(data);
 	}
 	exit(0);

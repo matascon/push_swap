@@ -10,12 +10,18 @@ typedef	struct	s_data
 	int			*a;
 	int			*b;
 	int			*aux;
+	int			*copy;
 	int			num_a;
 	int			num_b; //PENDING
 	int			argc;
 	char		**argv;
-	int			min;
-	int			pos_min;
+	int			min_a;
+	int			pos_min_a;
+	int			max_a;
+	int			pos_max_a;
+	int			max_b;
+	int			pos_max_b;
+	int			median;
 }				t_data;
 
 int		check_args(int argc, char **argv);

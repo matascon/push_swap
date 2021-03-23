@@ -16,7 +16,7 @@ int		main(int argc, char **argv)
 		analyzer(data);
 		//printf("Valor minimo = %i y posicion = %i\n\n", data->min, data->pos_min);
 		algorithm(data);
-		/*printf("STACK A ---> ");
+		printf("STACK A ---> ");
 		i = -1;
 		while (++i < data->num_a)
 			printf("%i ", data->a[i]);
@@ -24,15 +24,15 @@ int		main(int argc, char **argv)
 		i = -1;
 		while (++i < data->num_b)
 			printf("%i ", data->b[i]);
-		printf("\n");*/
+		printf("\n");
 		check_stacks(data);
 	}
 	/*analyzer(data);
 	printf("\nValor minimo = %i y posicion = %i\n", data->min, data->pos_min);
-	i = -1;
+	*/i = -1;
 	while (++i < data->num_a)
 		printf("%i ", data->a[i]);
-	printf("\n");*/
+	printf("\n");
 	ft_exit(data);
 	return (0);
 }

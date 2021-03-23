@@ -47,7 +47,40 @@ static void	stack_a(t_data *data)
 		i++;
 	}
 	data->num_a = i;
-	data->num_b = 0;
+}
+
+static void	sort(t_data *data)
+{
+	int	i;
+	int	j;
+	int aux;
+
+	i = -1;
+	while (++i < data->num_a)
+	{
+		j = -1;
+		while (++j < data->num_a - 1)
+		{
+			if (data->copy[j] > data->copy[j + 1])
+			{
+				aux = data->copy[j];
+				data->copy[j] = data->copy[j + 1];
+				data->copy[j + 1] = aux;
+			}
+		}
+	}
+}
+
+static void	copy(t_data *data)
+{
+	int	i;
+
+	data->copy = (int *)ft_calloc(data->num_a, sizeof(int));
+	i = -1;
+	while (++i < data->num_a)
+		data->copy[i] = data->a[i];
+	sort(data);
+	data->median = data->copy[data->num_a / 2];
 }
 
 t_data		*init_values(t_data *data, int argc, char **argv)
@@ -59,7 +92,11 @@ t_data		*init_values(t_data *data, int argc, char **argv)
 	data->b = NULL;
 	data->aux = NULL;
 	stack_a(data);
-	data->min = 0;
-	data->pos_min = 0;
+	data->num_b = 0;
+	data->min_a = 0;
+	data->pos_min_a = 0;
+	data->max_b = 0;
+	data->pos_max_b = 0;
+	copy(data);
 	return (data);
 }

@@ -36,7 +36,8 @@ void		check_stacks(t_data *data)
 	aux_b = data->num_b;
 	i = stack_a(data);
 	j = stack_b(data);
-	if (i + 1 == data->num_a && j + 1 == aux_b)
+	if (i + 1 == data->num_a && j + 1 == aux_b && \
+	(data->num_b == data->num_a || data->num_b + 1 == data->num_a))
 	{
 		k = -1;
 		while (++k < aux_b)
