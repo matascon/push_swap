@@ -3,6 +3,7 @@
 
 # include "../libft/libft.h"
 # include <stdio.h>
+# include <stdlib.h>
 
 typedef	struct	s_data
 {

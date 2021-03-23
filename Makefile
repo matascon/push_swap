@@ -1,11 +1,11 @@
 SRCS_CHECKER	=	pj_checker/checker.c			\
-					pj_checker/check_args.c		\
+					pj_checker/check_args.c			\
 					pj_checker/init_values.c		\
 					pj_checker/check_operations.c	\
 					pj_checker/exec_operations.c	\
 					pj_checker/swap.c				\
 					pj_checker/push.c				\
-					pj_checker/rotate.c			\
+					pj_checker/rotate.c				\
 					pj_checker/reverse.c			\
 					pj_checker/check_stacks.c		\
 					pj_checker/error.c
@@ -14,10 +14,10 @@ NAME_CHECKER	= checker
 SRCS_PUSH_SWAP	=	pj_push_swap/push_swap.c		\
 					pj_push_swap/check_args.c		\
 					pj_push_swap/init_values.c		\
-					pj_push_swap/analyzer.c		\
+					pj_push_swap/analyzer.c			\
 					pj_push_swap/check_stacks.c		\
-					pj_push_swap/algorithm.c	\
-					pj_push_swap/operations.c	\
+					pj_push_swap/algorithm.c		\
+					pj_push_swap/operations.c		\
 					pj_push_swap/error.c
 OBJS_PUSH_SWAP	= $(SRCS_PUSH_SWAP:.c=.o)
 NAME_PUSH_SWAP	= push_swap
