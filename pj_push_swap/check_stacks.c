@@ -1,5 +1,5 @@
 #include "push_swap.h"
-
+/*
 static int	stack_a(t_data *data)
 {
 	int i;
@@ -46,19 +46,19 @@ void		check_stacks(t_data *data)
 			ft_putstr_fd("pa\n", 1);
 		}
 	}
-}
+}*/
 
-int			check_stack(t_data *data)
+int			check_stack_a(t_data *data)
 {
 	int	i;
 
 	i = -1;
 	while (++i < data->num_a - 1)
 	{
-		if (data->a[i] > data->a[i + 1])
+		if (data->a[i] > data->a[i + 1] || data->a[i] < data->median)
 			break ;
 	}
-	if (i + 1 == data->num_a && !data->b)
+	if (i + 1 == data->num_a)
 		return (0);
 	else
 		return (1);

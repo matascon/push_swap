@@ -12,13 +12,13 @@ typedef	struct	s_data
 	int			*aux;
 	int			*copy;
 	int			num_a;
-	int			num_b; //PENDING
+	int			num_b;
 	int			argc;
 	char		**argv;
 	int			min_a;
-	int			pos_min_a;
+	int			pos_min_a;  //PENDING
 	int			max_a;
-	int			pos_max_a;
+	int			pos_max_a;  //PENDING
 	int			max_b;
 	int			pos_max_b;
 	int			median;
@@ -27,8 +27,9 @@ typedef	struct	s_data
 int		check_args(int argc, char **argv);
 t_data	*init_values(t_data *data, int argc, char **argv);
 void	analyzer(t_data *data);
-void	algorithm(t_data *data);
-int		check_stack(t_data *data);
+void	algorithm_a(t_data *data);
+void	algorithm_b(t_data *data);
+int		check_stack_a(t_data *data);
 void	push_a(t_data *data);
 void	push_b(t_data *data);
 void	swap(t_data *data, char c);
