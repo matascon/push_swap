@@ -10,12 +10,13 @@ typedef	struct	s_data
 	int			*a;
 	int			*b;
 	int			*aux;
+	int			*sort;
+	int			pivot;
+	int			index;
 	int			num_a;
-	int			num_b; //PENDING
+	int			num_b;
 	int			argc;
 	char		**argv;
-	int			min;
-	int			pos_min;
 }				t_data;
 
 int		check_args(int argc, char **argv);

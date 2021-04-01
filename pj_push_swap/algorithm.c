@@ -2,24 +2,21 @@
 
 void	algorithm(t_data *data)
 {
-	if (data->a[0] == data->min)
+	int	i;
+
+	i = 0;
+	while (i <= data->index)
 	{
-		push_b(data);
-		ft_putstr_fd("pb\n", 1);
-	}
-	else if (data->a[1] < data->a[0])
-	{
-		swap(data, 'a');
-		ft_putstr_fd("sa\n", 1);
-	}
-	else if ((float)data->pos_min / data->num_a > 0.5)
-	{
-		reverse_rotate(data, 'a');
-		ft_putstr_fd("rra\n", 1);
-	}
-	else if ((float)data->pos_min / data->num_a <= 0.5)
-	{
-		rotate(data, 'a');
-		ft_putstr_fd("ra\n", 1);
+		if (data->a[0] <= data->pivot)
+		{
+			push_b(data);
+			ft_putstr_fd("pb\n", 1);
+			i++;
+		}
+		else if (data->a[0] > data->pivot)
+		{
+			rotate(data, 'a');
+			ft_putstr_fd("ra\n", 1);
+		}
 	}
 }
